@@ -33,5 +33,5 @@ console.assert(fullNamesList1[1] === "Ms. Kate Smith")
 //-------------------------------
 var moreNamesList = getFullNames(moreCustomersList)
 console.assert(typeof moreNamesList[1] === "string")
-console.assert(moreNamesList[1] === "Ms. Ruby Scooby")
+console.assert(moreNamesList[0] === "Ms. Ruby Scooby")
 console.assert(moreNamesList[2] === "Mr. Dan Theman")
