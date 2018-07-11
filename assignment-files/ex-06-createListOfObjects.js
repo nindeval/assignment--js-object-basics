@@ -21,9 +21,24 @@
 */
 
 
+// ++ YOUR CODE HERE
 
 
-//*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
+
+
+
+
+
+
+
+
+// *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+// *~*~*~*~*~*~*~* Tests (Don't Touch) *~*~*~*~*~*~*~*~*
+// *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+console.group('ex-06');
+  console.log('%cFunction: createListOfObjects', 'background-color: green; color: white')
+console.groupEnd();
+
 
 var realNinjas = [
   'Chuck Norris',
@@ -43,21 +58,39 @@ var realSportsStars = [
 ]
 
 
-
 var ninjaListOfObjects = createListOfObjects(realNinjas)
+var sportStarsListOfObjects = createListOfObjects(realSportsStars)
 
+/* ----------------------- TEST-1  ----------------------- */
+// Function returns an array of objects
+/* ------------------------------------------------------ */
+console.log('TEST-1');
+
+console.assert(Array.isArray(ninjaListOfObjects) === true)
 console.assert(typeof ninjaListOfObjects[0] === "object")
+
+
+//* ----------------------- TEST-2  ----------------------- */
+// Each object element of array has `firstName` + `lastName`
+//    properties
+/* ------------------------------------------------------ */
+console.log('TEST-2');
+
+// createListOfObjects(realNinjas)
 console.assert(ninjaListOfObjects[0].firstName === "Chuck")
 console.assert(ninjaListOfObjects[0].lastName === "Norris")
-console.assert(ninjaListOfObjects[1].firstName === "Jacky")
+
+console.assert(ninjaListOfObjects[1].firstName === "Jackie")
 console.assert(ninjaListOfObjects[1].lastName === "Chan")
+
 console.assert(ninjaListOfObjects[3].firstName === "Billy")
 console.assert(ninjaListOfObjects[3].lastName === "Blanks")
 
-//------------------------------
-var sportStarsListOfObjects = createListOfObjects(realSportsStars)
-console.assert(typeof sportStarsListOfObjects === "object")
+
+
+// createListOfObjects(realSportsStars)
 console.assert(sportStarsListOfObjects[1].firstName === "Ricky")
 console.assert(sportStarsListOfObjects[1].lastName === "Vaughn")
+
 console.assert(sportStarsListOfObjects[3].firstName === "Jesus")
 console.assert(sportStarsListOfObjects[3].lastName === "Shuttlesworth")
